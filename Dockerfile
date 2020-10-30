@@ -19,6 +19,8 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /go/bin/app
 COPY --from=builder /go/src/app/app .
 
+COPY config.yml .
+
 EXPOSE 9000
 
 CMD ["./app"]  

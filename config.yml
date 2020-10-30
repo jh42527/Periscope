@@ -1,0 +1,24 @@
+name: Periscope Micro-Gateway
+environment: Local
+port: :9000
+proxies:
+  - name: Posts
+    method: GET
+    path: /posts
+    target: https://jsonplaceholder.typicode.com/posts
+    cache: 180s
+  - name: Photos
+    method: GET
+    path: /photos
+    target: https://jsonplaceholder.typicode.com/photos
+    cache: 3600s
+  - name: Users
+    method: GET
+    path: /users
+    target: https://jsonplaceholder.typicode.com/users
+    cache: 60s
+  - name: Comments
+    method: GET
+    path: /comments
+    target: https://jsonplaceholder.typicode.com/comments
+    cache: 15s
