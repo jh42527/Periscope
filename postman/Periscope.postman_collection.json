@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "f0cbe9a7-1aac-41ea-8f15-5b536551baee",
+		"name": "Periscope",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Access Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic MjIyMjIyOjIyMjIyMjIy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9000/token?grant_type=client_credentials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Proxy Posts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{ACCESSTOKEN}}"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Proxy Comments",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{ACCESSTOKEN}}"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/comments",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Proxy Photos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{ACCESSTOKEN}}"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/photos",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Proxy Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer {{ACCESSTOKEN}}"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ed69b8be-9714-4037-bc16-e3eaece28e35",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a4ffb774-de01-4b3c-adbc-fb7b03f38786",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "baadf221-e49a-4f46-a57e-96ad82b17031",
+			"key": "ACCESSTOKEN",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
