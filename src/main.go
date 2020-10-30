@@ -11,7 +11,7 @@ import (
 // TO-DO: Better Error Handling
 func main() {
 	// get config path flag or default
-	configPtr := flag.String("c", "/opt/config/config.yml", "config to process")
+	configPtr := flag.String("c", "config.yml", "config to process")
 
 	flag.Parse()
 
